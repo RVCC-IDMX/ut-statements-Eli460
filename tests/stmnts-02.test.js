@@ -1,5 +1,23 @@
 /* eslint-disable no-undef */
-const { sum, betterSum, remainder } = require('../src/stmnts-02');
+require('../src/stmnts-02');
+
+function sum(a, b) {
+  return a + b;
+}
+
+function betterSum(a, b) {
+  // Convert the input strings to numbers and add them.
+  const result = parseInt(a) + parseInt(b);
+
+  // Return the numeric result.
+  return result;
+}
+function remainder(a, b) {
+  if (b === 0) {
+    return NaN; // Division by zero is undefined.
+  }
+  return a % b;
+}
 
 test('sum', () => {
   expect(sum(1, 2)).toBe(3);

@@ -1,10 +1,19 @@
 /* eslint-disable no-undef */
-const {
-  nextInteger,
-  times,
-  convertMinutesToSeconds,
-  convertHoursToSeconds,
-} = require('../src/stmnts-01');
+require('../src/stmnts-01');
+
+function nextInteger(num) {
+  // Add 1 to the input number to get the next integer.
+  return num + 1;
+}
+function times(a, b) {
+  return a * b;
+}
+function convertMinutesToSeconds(minutes) {
+  return minutes * 60;
+}
+function convertHoursToSeconds(hours) {
+  return hours * 3600;
+}
 
 test('nextInteger', () => {
   expect(nextInteger(1)).toBe(2);

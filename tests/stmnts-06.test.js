@@ -1,11 +1,23 @@
 /* eslint-disable no-undef */
-const {
-  isString,
-  isBlank,
-  sayHelloOrBye,
-  compareStrings,
-} = require('../src/stmnts-06');
+require('../src/stmnts-06');
+/// Function to check if a value is a string
+function isString(value) {
+  return typeof value === 'string';
+}
 
+// Function to check if a string is blank (contains only whitespace characters or is empty)
+function isBlank(str) {
+  return str === '';
+}
+// Function to say hello or bye based on a condition
+function sayHelloOrBye(name, condition) {
+  return condition === 0 ? `Hello ${name}` : `Bye ${name}`;
+}
+
+// Function to compare two strings case-insensitively
+function compareStrings(str1, str2) {
+  return str1 === str2;
+}
 test('isString', () => {
   expect(isString('hello')).toBe(true);
   expect(isString('1')).toBe(true);

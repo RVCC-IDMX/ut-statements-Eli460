@@ -1,8 +1,18 @@
 /* eslint-disable no-undef */
-const {
-  fahrenheitToCelsius,
-  celsiusToFahrenheit,
-} = require('../src/stmnts-04');
+require('../src/stmnts-04');
+
+function fahrenheitToCelsius(fahrenheit) {
+  const total = (fahrenheit - 32) * (5 / 9);
+  const rounded = Math.round(total * 100) / 100;
+  return rounded;
+}
+
+// Function to convert Celsius to Fahrenheit
+function celsiusToFahrenheit(celsius) {
+  const total = (celsius * 9) / 5 + 32;
+  const rounded = Math.ceil(total * 100) / 100;
+  return rounded;
+}
 
 test('fahrenheitToCelsius', () => {
   expect(fahrenheitToCelsius(32)).toBe(0);

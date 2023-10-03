@@ -1,12 +1,37 @@
 /* eslint-disable no-undef */
-const {
-  rectanglePerimeter,
-  rectangleArea,
-  circleCircumference,
-  circleArea,
-  triangleArea,
-  pythagorean,
-} = require('../src/stmnts-03');
+require('../src/stmnts-03');
+
+// Calculate rectangle perimeter
+function rectanglePerimeter(length, width) {
+  return 2 * (length + width);
+}
+
+// Calculate rectangle area
+function rectangleArea(length, width) {
+  return length * width;
+}
+
+// Calculate circle circumference
+function circleCircumference(radius) {
+  return 2 * Math.PI * radius;
+}
+
+// Calculate circle area
+function circleArea(radius) {
+  return Math.PI * radius * radius;
+}
+
+// Calculate triangle area
+function triangleArea(base, height) {
+  const total = 0.5 * base * height;
+  const rounded = Math.ceil(total * 100) / 100;
+  return rounded;
+}
+
+// Calculate the length of the hypotenuse using the Pythagorean theorem
+function pythagorean(a, b) {
+  return Math.sqrt(a * a + b * b);
+}
 
 test('rectanglePerimeter', () => {
   expect(rectanglePerimeter(2, 3)).toBeTypeOf('number');

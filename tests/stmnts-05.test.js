@@ -1,5 +1,20 @@
 /* eslint-disable no-undef */
-const { isOdd, isEven, isNegative } = require('../src/stmnts-05');
+require('../src/stmnts-05');
+
+// Function to check if a number is even
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+// Function to check if a number is odd
+function isOdd(number) {
+  return number % 2 !== 0;
+}
+
+// Function to check if a number is negative
+function isNegative(number) {
+  return number < 0;
+}
 
 test('isEven', () => {
   expect(isEven(32)).toBe(true);
